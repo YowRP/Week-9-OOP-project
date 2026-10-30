@@ -31,6 +31,16 @@ class Product:
     def to_dict(self):
         return {"Product ID": self.__product_id, "Product Name": self.__name, "Price": self.__price, "Stock": self.__stock}
 
+class PhysicalProduct (Product):
+    def __init__ (self, product_id, name, price, stock, weight):
+        super().__init__ (product_id, name, price, stock)
+        self.weight = weight
+
+class DigitalProduct (Product):
+    def __init__ (self, product_id, name, price, stock, download_size):
+        super().__init__(product_id, name, price, stock)
+        self.download_size = download_size
+
 class Inventory:
 
     def __init__ (self):
@@ -83,7 +93,7 @@ def load_inventory ():
 
     return inventory
 
-def main():
+#def main():
     inventory = load_inventory()
 
     while True:
@@ -158,6 +168,11 @@ def main():
         else:
             print("Invalid option.")
 
-if __name__ == "__main__":
+#if __name__ == "__main__":
     main()
-    
+
+guitar = PhysicalProduct("P001", "Acoustic Guitar", 299.99, 10, 2.5)
+os_license = DigitalProduct("D001", "Operating System", 149.00, 100, 4500)
+
+guitar.display_information()
+os_license.display_information()
