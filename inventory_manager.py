@@ -140,7 +140,7 @@ def load_inventory ():
 
     return inventory
 
-#def main():
+def main():
     inventory = load_inventory()
 
     while True:
@@ -157,6 +157,11 @@ def load_inventory ():
             inventory.display_all()
 
         elif choice == "2":
+            product_type = input("Product type (1. Physical, 2. Digital): ").strip()
+            if product_type not in ("1", "2"):
+                print("Invalid producy type.")
+                continue 
+
             product_id = input("Enter Product ID: ").strip()
             name = input("Enter Product Name: ").strip()
             try:
@@ -215,6 +220,6 @@ def load_inventory ():
         else:
             print("Invalid option.")
 
-#if __name__ == "__main__":
+if __name__ == "__main__":
     main()
 
