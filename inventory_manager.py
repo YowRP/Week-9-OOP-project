@@ -1,9 +1,10 @@
 import json
 import os
+from abc import ABC, abstractmethod
 
 INVENTORY_FILE = "inventory.json"
 
-class Product:
+class Product (ABC):
 
     def __init__ (self, product_id, name, price, stock):
 
@@ -31,6 +32,10 @@ class Product:
     def to_dict(self):
         return {"Product ID": self.__product_id, "Product Name": self.__name, "Price": self.__price, "Stock": self.__stock}
 
+    @abstractmethod
+    def get_fulfillment_info (self):
+        pass
+
 class PhysicalProduct (Product):
     def __init__ (self, product_id, name, price, stock, weight):
         super().__init__ (product_id, name, price, stock)
@@ -40,6 +45,9 @@ class PhysicalProduct (Product):
         super().display_information()
         print(f"Weight: {self.__weight}kg")
 
+    def get_fulfillment_info(self):
+        return "This product requires physical shipping."
+
 class DigitalProduct (Product):
     def __init__ (self, product_id, name, price, stock, download_size):
         super().__init__(product_id, name, price, stock)
@@ -48,6 +56,9 @@ class DigitalProduct (Product):
     def display_information(self):
         super().display_information()
         print(f"Download size: {self.__download_size}MB")
+
+    def get_fulfillment_info(self):
+        return "This product is delivered digitally."
 
 class Inventory:
 
@@ -179,8 +190,3 @@ def load_inventory ():
 #if __name__ == "__main__":
     main()
 
-guitar = PhysicalProduct("P001", "Acoustic Guitar", 299.99, 10, 2.5)
-os_license = DigitalProduct("D001", "Operating System", 149.00, 100, 4500)
-
-guitar.display_information()
-os_license.display_information()
