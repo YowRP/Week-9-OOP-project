@@ -77,7 +77,7 @@ class DigitalProduct (Product):
     def to_dict(self):
         data  = super().to_dict()
         data ["Type"] = "Digital"
-        data ["Download Size "] = self.__download_size
+        data ["Download Size"] = self.__download_size
         return data
 
 class Inventory:
@@ -134,7 +134,7 @@ def load_inventory ():
                 else: 
                     print("Unknown Type. Skipped")
                     continue
-            inventory.add_product(product)
+                inventory.add_product(product)
     else:
         print("Inventory not found.")
 
@@ -159,7 +159,7 @@ def main():
         elif choice == "2":
             product_type = input("Product type (1. Physical, 2. Digital): ").strip()
             if product_type not in ("1", "2"):
-                print("Invalid producy type.")
+                print("Invalid product type.")
                 continue 
 
             product_id = input("Enter Product ID: ").strip()
@@ -167,11 +167,19 @@ def main():
             try:
                 price = float(input("Enter the price of the product: ").strip())
                 stock = int(input("Enter the stock amount of the product: ").strip())
+
+                if product_type == "1":
+                    weight = float(input("Enter the weight (kg): ").strip())
+                    product = PhysicalProduct(product_id, name, price, stock, weight)
+
+                elif product_type == "2":
+                    download_size = float(input("Enter the download size (MB): ").strip())
+                    product = DigitalProduct(product_id, name, price, stock, download_size)
+
             except ValueError:
                 print("Invalid input, Product not added.")
                 continue
 
-            product = Product(product_id , name, price, stock)
             if inventory.add_product(product):
                 print("Product added succesfully!")
 
