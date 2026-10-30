@@ -1,4 +1,28 @@
-commit e11a8b969e0a356f7b09c22d9f7c43634a4c8665 (HEAD -> main, origin/main)
+commit 54ec5a1d78ec793843aa779fc2b9b1d33c59dd48 (HEAD -> main, origin/main)
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 30 15:23:54 2026 +0800
+
+    Readme created
+
+commit 990862204a4362a587895e612374aa94dc10c3dc
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 30 15:22:29 2026 +0800
+
+    images and also docker builds
+
+commit 163b18066c41309ded58648cdc97e06dec1ee52e
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 30 15:16:31 2026 +0800
+
+    Dockerfile created
+
+commit 7797e7bded726f549620bda5813140606b76c426
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 30 15:14:08 2026 +0800
+
+    git log added
+
+commit e11a8b969e0a356f7b09c22d9f7c43634a4c8665
 Author: YowRP <2604111@sit.singaporetech.edu.sg>
 Date:   Fri Oct 30 15:12:08 2026 +0800
 
@@ -69,3 +93,6 @@ Author: YowRP <2604111@sit.singaporetech.edu.sg>
 Date:   Fri Oct 30 13:32:00 2026 +0800
 
     Import from week 8
+(END)
+
+
