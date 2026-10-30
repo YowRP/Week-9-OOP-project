@@ -1,0 +1,71 @@
+commit e11a8b969e0a356f7b09c22d9f7c43634a4c8665 (HEAD -> main, origin/main)
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 30 15:12:08 2026 +0800
+
+    Lab 7: add .gitignore and remove tracked Python cache
+
+commit d9b4e07fcab658db08d77ea7284efe55f8888ad0
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 30 15:03:47 2026 +0800
+
+    test file created and all test passed
+
+commit 48ca51c4c7cbcd4cdda4d5e392d202cba7964ac6
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 30 14:56:16 2026 +0800
+
+    UML class diagram done
+
+commit f332a70f4159e3e0ad7c5f1fc16bb6d58fc56e2a
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 30 14:40:29 2026 +0800
+
+    Added new product choices for main defination
+
+commit 4f8fd9639f8b17470ef88466617701ce2b87f0df
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 30 14:30:03 2026 +0800
+
+    choice 2 changed for product type
+
+commit 5ed72a2fe95a996131335ebad1132e0ae565fe1d
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 30 14:25:08 2026 +0800
+
+    Added dictionary function to store different types of products
+
+commit 2d001ec18333a9d8b5f2a92becd86f71063acc79
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 30 14:16:39 2026 +0800
+
+    spelling mistakes corrected
+
+commit 5e1d940cfd6ee3477c182d879dd734fe89c0178a
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 30 14:14:24 2026 +0800
+
+    calculate shipping cost abstract method created
+
+commit e0aab03976d2f14d60e1d7f2517049587fd88979
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 30 14:09:29 2026 +0800
+
+    abstract method added
+
+commit 3eb6c8a05663d61c56c08eb6f555fc8d2853a51b
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 30 13:51:06 2026 +0800
+
+    display information for both child classes are added
+
+commit a5af074768a47461076d93f63c54d5a1b656192a
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 30 13:47:48 2026 +0800
+
+    child classes physical product and digital product are added
+
+commit 624d96547433faac05a5964862134abf19ea72b5
+Author: YowRP <2604111@sit.singaporetech.edu.sg>
+Date:   Fri Oct 30 13:32:00 2026 +0800
+
+    Import from week 8
