@@ -1,10 +1,18 @@
 [
     {
-        "Product ID": "PD10233",
-        "Product Name": "Gemini",
-        "Price": 50.0,
-        "Stock": 3,
+        "Product ID": "P001",
+        "Product Name": "Guitar",
+        "Price": 299.99,
+        "Stock": 10,
+        "Type": "Physical",
+        "Weight": 2.5
+    },
+    {
+        "Product ID": "D001",
+        "Product Name": "Operating System",
+        "Price": 149.0,
+        "Stock": 50,
         "Type": "Digital",
-        "Download Size": 8000.0
+        "Download Size": 4500
     }
 ]
