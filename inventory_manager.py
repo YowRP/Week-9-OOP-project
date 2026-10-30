@@ -55,6 +55,12 @@ class PhysicalProduct (Product, CanBeShipped):
 
     def calculate_shipping_cost(self):
         return 5.00 + (self.__weight * 2.00)
+
+    def to_dict (self):
+        data =  super().to_dict()
+        data ["Type"] = "Physical"
+        data ["Weight"] = self.__weight
+        return data
     
 class DigitalProduct (Product):
     def __init__ (self, product_id, name, price, stock, download_size):
@@ -67,6 +73,12 @@ class DigitalProduct (Product):
 
     def get_fulfilment_info(self):
         return "This product is delivered digitally."
+
+    def to_dict(self):
+        data  = super().to_dict()
+        data ["Type"] = "Digital"
+        data ["Download Size "] = self.__download_size
+        return data
 
 class Inventory:
 
@@ -113,8 +125,16 @@ def load_inventory ():
         with open (INVENTORY_FILE, "r") as f:
             data = json.load(f)
             for i in data:
-                product = Product(i["Product ID"], i["Product Name"], i["Price"], i["Stock"])
-                inventory.add_product(product)
+                if i ["Type"] == "Physical":
+                    product = PhysicalProduct(i["Product ID"], i["Product Name"], i["Price"], i["Stock"], i["Weight"])
+
+                elif i["Type"] == "Digital":
+                    product = DigitalProduct(i["Product ID"], i["Product Name"], i["Price"], i["Stock"], i["Download Size"])
+
+                else: 
+                    print("Unknown Type. Skipped")
+                    continue
+            inventory.add_product(product)
     else:
         print("Inventory not found.")
 
